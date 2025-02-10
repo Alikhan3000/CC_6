@@ -19,3 +19,25 @@ console.log(`Sales Tax: $${calculateSalesTax(100, 0.07)}`); //logged the output 
 console.log(`Sales Tax: $${calculateSalesTax(500, 0.01)}`);
 
 
+//Task 3: Arrow Function
+
+let calculateBonus = (salary, performanceRating) => { //declared an arrow function with if else statement
+
+    let bonus = 0;
+    
+    if (performanceRating == "Excellent") {     //used if else statement to assign the right bonus percentage 
+        bonus = 0.2;
+    } else if (performanceRating == "Good") {
+        bonus = 0.1;
+    }else if(performanceRating == "Average"){
+        bonus = 0.05;
+
+    
+    }
+    let salary_total = salary * bonus;  //calculated the bonus amount after one of the categories is satisfied
+    return salary_total;
+};    
+
+console.log(calculateBonus(5000, "Excellent")); //logged the expected bonuses
+console.log(calculateBonus(7000, "Good"));
+console.log(calculateBonus(4000, "Average"));
