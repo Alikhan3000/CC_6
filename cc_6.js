@@ -41,3 +41,27 @@ let calculateBonus = (salary, performanceRating) => { //declared an arrow functi
 console.log(calculateBonus(5000, "Excellent")); //logged the expected bonuses
 console.log(calculateBonus(7000, "Good"));
 console.log(calculateBonus(4000, "Average"));
+
+
+//Task 4: Parameters and Arguments
+
+let calculateSubscriptionCost = (plan, months, discount = 0) => { //declared an arrow function with if else statement
+
+    let payment  = 0;
+    
+    if (plan == "Basic") {     //used if else statement to assign the right payment amount 
+        payment = 10;
+    } else if (plan == "Premium") {
+        payment = 20;
+    }else if(plan == "Enterprise"){
+        payment = 50;
+    }
+    let payment_total = (payment * months) - discount  //calculated the payment amount after one of the categories is satisfied
+    return payment_total;
+};    
+
+console.log(calculateSubscriptionCost("Basic", 6, 10)); //logged the expected payment amounts 
+console.log(calculateSubscriptionCost("Premium", 12, 0));
+
+
+
