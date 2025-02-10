@@ -63,5 +63,12 @@ let calculateSubscriptionCost = (plan, months, discount = 0) => { //declared an 
 console.log(calculateSubscriptionCost("Basic", 6, 10)); //logged the expected payment amounts 
 console.log(calculateSubscriptionCost("Premium", 12, 0));
 
+//Task 5: Returning Values
 
+function convertCurrency(amount, exchangeRate){ //declared a function that multiplies amount by exchangeRate
+    let currency = amount * exchangeRate;
+    return currency.toFixed(2);
+}
 
+console.log(convertCurrency(100, 1.1)); //logged the function output
+console.log(convertCurrency(250, 0.85));
